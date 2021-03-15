@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\utilisateur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class dashboardController extends Controller
 {
@@ -18,7 +20,7 @@ class dashboardController extends Controller
         return view('/pages/dashboard');
     }
     public function deconnexion(){
-        auth()->logout();
+        Auth::logout();
         return redirect('/connexion');
     }
 }

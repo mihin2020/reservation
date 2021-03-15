@@ -12,26 +12,27 @@ class connexionController extends Controller
         return view('pages/connexion');
     }
 
-    public function traitement(){
+    public function traitement(Request $request){
 
-        request()->validate([
+       request()->validate([
             'email'=> ['required','email'],
-            'password'=> ['required','confirmed','min:8'],
+            'password'=> ['required','min:8'],
         ]);
+    /**
+     * Handle an authentication attempt.
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return Response
+     */
+    
+        $credentials = $request->only('email', 'password');
 
-       $resultat = auth() ->attempt([
-            'email' => request('email'),
-            'password' => request('password'),
-        ]);
-        
-        if($resultat){
-
-            return redirect('/pages/dashboard');
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('/dashboard');
         }
         
-            return back()->withInput()->withErrors([
-                'email'=> 'Vos identifiants sont incorrects',
-            ]);
     }
        
 }

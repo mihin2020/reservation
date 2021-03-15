@@ -33,7 +33,7 @@ class inscriptionController extends Controller
             'password_confirmation' => bcrypt(request('password_confirmation')),
         ]) ;
        
-        return ('le formulaire a ete bien recu ou bien'.' '.request('email'));
+        return view ('pages/success');
 
     }
 }

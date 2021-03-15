@@ -33,3 +33,8 @@ Route::get('/dashboard', 'dashboardController@acceuil');
 Route::get('/deconnexion', 'dashboardController@deconnexion');
 
 Route::view('/programmation', '/pages/programmation');
+
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
