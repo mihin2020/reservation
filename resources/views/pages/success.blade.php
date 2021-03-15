@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/success.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -29,9 +30,10 @@
   </div>
   <div id='lower-side'>
     <p id='message'>
-     Votre demande d'inscription a été  bien enrégistré!!!
+     Votre demande d'inscription a été  bien enrégistré <br>
+     <span class="mt-1 ">En attente de validation!!!</span> 
     </p>
-    <a href="/dashboard" id="contBtn">Continuer</a>
+    <a href="/connexion" id="contBtn">Continuer</a>
   </div>
 </div>
 

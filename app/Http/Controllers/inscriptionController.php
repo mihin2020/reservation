@@ -15,11 +15,11 @@ class inscriptionController extends Controller
 
         request()->validate(
             [
-                'nom'=> ['required'],
-                'prenom'=> ['required'],
-                'role'=> ['required'],
+                'nom'=> ['required','string'],
+                'prenom'=> ['required','string'],
+                'role'=> ['required','string'],
                 'email'=> ['required','email'],
-                'password'=> ['required','confirmed','min:8'],
+                'password'=> ['required','confirmed','min:3','max:6'],
                 'password_confirmation'=> ['required'],
             ]
             );

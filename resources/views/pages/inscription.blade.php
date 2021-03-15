@@ -32,31 +32,31 @@
                                     {{@csrf_field()}}
                                         <div class="">
                                         @if($errors->has('nom'))
-                                            <p>{{$errors->first('nom') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('nom') }}</p> 
                                         @endif
                                             <input type="text" name="nom" value="{{old('nom')}}" id="username" class="form__input" placeholder="nom">
                                         </div>
                                         <div class="">
                                         @if($errors->has('prenom'))
-                                            <p>{{$errors->first('prenom') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('prenom') }}</p> 
                                         @endif
                                             <input type="text" name="prenom"  value="{{old('prenom')}}"id="username" class="form__input" placeholder="Prenom">
                                         </div>
                                         <div class="">
                                         @if($errors->has('role'))
-                                            <p>{{$errors->first('role') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('role') }}</p> 
                                         @endif
                                             <input type="text" name="role" value="{{old('role')}}" id="username" class="form__input" placeholder="role">
                                         </div>
                                         <div class="">
                                         @if($errors->has('email'))
-                                            <p>{{$errors->first('email') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('email') }}</p> 
                                         @endif
                                             <input type="text" name="email" value="{{old('email')}}" id="username" class="form__input" placeholder="Email">
                                         </div>
                                         <div class="">
                                         @if($errors->has('password'))
-                                            <p>{{$errors->first('password') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('password') }}</p> 
                                         @endif
                                             <!-- <span class="fa fa-lock"></span> -->
                                             <input type="password" name="password" id="password" class="form__input" placeholder="Mot de passe">

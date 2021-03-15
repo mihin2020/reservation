@@ -32,13 +32,13 @@
                                     {{@csrf_field()}}
                                         <div class="">
                                         @if($errors->has('email'))
-                                            <p>{{$errors->first('email') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('email') }}</p> 
                                         @endif
                                             <input type="text" name="email" value="{{old('email')}}" id="username" class="form__input" placeholder="Email">
                                         </div>
                                         <div class="">
                                         @if($errors->has('password'))
-                                            <p>{{$errors->first('password') }}</p> 
+                                            <p class="font-weight-bold text-danger">{{$errors->first('password') }}</p> 
                                         @endif
                                             <!-- <span class="fa fa-lock"></span> -->
                                             <input type="password" name="password" id="password" class="form__input" placeholder="Mot de passe">
@@ -48,9 +48,9 @@
                                         </div>
                                     </form>
                                 </div>
-                               <!-- <div class="">
-                                    <p>Don't have an account? <a href="#">Register Here</a></p>
-                                </div>-->
+                                <div class="">
+                                    <p class="font-weight-bold text-danger">Vous n'avez pas de compte? <a href="/inscription">Inscrivez-vous</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
