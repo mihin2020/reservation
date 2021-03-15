@@ -28,11 +28,18 @@
                                     <h2 class="mt-2 text-uppercase">Connexion</h2>
                                 </div>
                                 <div class="">
-                                    <form control="" class="form-group">
+                                    <form control="" class="form-group" action="/connexion" method="post">
+                                    {{@csrf_field()}}
                                         <div class="">
-                                            <input type="text" name="username" id="username" class="form__input" placeholder="Utilisateur">
+                                        @if($errors->has('email'))
+                                            <p>{{$errors->first('email') }}</p> 
+                                        @endif
+                                            <input type="text" name="email" value="{{old('email')}}" id="username" class="form__input" placeholder="Email">
                                         </div>
                                         <div class="">
+                                        @if($errors->has('password'))
+                                            <p>{{$errors->first('password') }}</p> 
+                                        @endif
                                             <!-- <span class="fa fa-lock"></span> -->
                                             <input type="password" name="password" id="password" class="form__input" placeholder="Mot de passe">
                                         </div>
@@ -41,9 +48,9 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="">
+                               <!-- <div class="">
                                     <p>Don't have an account? <a href="#">Register Here</a></p>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>

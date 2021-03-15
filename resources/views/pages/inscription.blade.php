@@ -31,24 +31,39 @@
                                     <form control="" class="form-group" action="/inscription" method="post">
                                     {{@csrf_field()}}
                                         <div class="">
-                                            <input type="text" name="nom" id="username" class="form__input" placeholder="nom">
+                                        @if($errors->has('nom'))
+                                            <p>{{$errors->first('nom') }}</p> 
+                                        @endif
+                                            <input type="text" name="nom" value="{{old('nom')}}" id="username" class="form__input" placeholder="nom">
                                         </div>
                                         <div class="">
-                                            <input type="text" name="prenom" id="username" class="form__input" placeholder="Prenom">
+                                        @if($errors->has('prenom'))
+                                            <p>{{$errors->first('prenom') }}</p> 
+                                        @endif
+                                            <input type="text" name="prenom"  value="{{old('prenom')}}"id="username" class="form__input" placeholder="Prenom">
                                         </div>
                                         <div class="">
-                                            <input type="text" name="role" id="username" class="form__input" placeholder="role">
+                                        @if($errors->has('role'))
+                                            <p>{{$errors->first('role') }}</p> 
+                                        @endif
+                                            <input type="text" name="role" value="{{old('role')}}" id="username" class="form__input" placeholder="role">
                                         </div>
                                         <div class="">
-                                            <input type="text" name="email" id="username" class="form__input" placeholder="Email">
+                                        @if($errors->has('email'))
+                                            <p>{{$errors->first('email') }}</p> 
+                                        @endif
+                                            <input type="text" name="email" value="{{old('email')}}" id="username" class="form__input" placeholder="Email">
                                         </div>
                                         <div class="">
+                                        @if($errors->has('password'))
+                                            <p>{{$errors->first('password') }}</p> 
+                                        @endif
                                             <!-- <span class="fa fa-lock"></span> -->
                                             <input type="password" name="password" id="password" class="form__input" placeholder="Mot de passe">
                                         </div>
                                         <div class="">
                                             <!-- <span class="fa fa-lock"></span> -->
-                                            <input type="password" name="confirm_password" id="password" class="form__input" placeholder=" Confirmer Mot de passe">
+                                            <input type="password" name="password_confirmation" id="password" class="form__input" placeholder=" Confirmer Mot de passe">
                                         </div>
                                         <div class=" ">
                                             <button class="btn btn-outline-danger my-2 my-sm-0 font-weight-bold" type="submit">S'inscrire</button>
@@ -56,7 +71,7 @@
                                     </form>
                                 </div>
                                 <div class="">
-                                    <p>Don't have an account? <a href="#">Register Here</a></p>
+                                    <p class="font-weight-bold">Avez vous déjà un compte? <a href="/connexion">Connectez-vous</a></p>
                                 </div>
                             </div>
                         </div>

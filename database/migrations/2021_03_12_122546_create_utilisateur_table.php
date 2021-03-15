@@ -19,7 +19,7 @@ class CreateUtilisateurTable extends Migration
             $table->string('role');
             $table->string('email');
             $table->string('password');
-            $table->string('confirm_password');
+            $table->string('password_confirmation');
             $table->timestamps();
         });
     }
