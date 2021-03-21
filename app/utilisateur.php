@@ -6,11 +6,13 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
 use Illuminate\Database\Eloquent\Model;
 
+
 class utilisateur extends Model implements Authenticatable
 {
     use  BasicAuthenticatable;
-    protected $fillable = [
-        'nom', 'prenom', 'role','email','password','password_confirmation'
+    protected $fillable = [ // $fillable permet de signifier les champs modifiables il est le contraire de $guarded
+        'nom', 'prenom', 'role','email','password','password_confirmation' 
+       
     ];
 
     /**

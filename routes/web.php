@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\inscriptionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\Mail;
+use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +25,15 @@ Route::get('/', function () {
 
 
 
+    Route::get('/test', function () {
+        $programs = DB ::table('programs')->get();
+        return view('/pages/test',compact('programs'));
+      
+    });
+    
+
+
+
 Route::get('/inscription', 'inscriptionController@formulaire');
 
 Route::post('/inscription', 'inscriptionController@traitement');
@@ -32,9 +46,13 @@ Route::get('/dashboard', 'dashboardController@acceuil');
 
 Route::get('/deconnexion', 'dashboardController@deconnexion');
 
-Route::view('/programmation', '/pages/programmation');
+Route::get('/programmation', 'programController@formulaire');
+
+Route::post('/program', 'programController@traitement');
+
+//Route::get('/send-email', [MailController::class,'sendMail']);
 
 
-
+//Route::get('/test', [Display_ProgramController::class, 'programmation']);
 
 Route::get('/home', 'HomeController@index')->name('home');

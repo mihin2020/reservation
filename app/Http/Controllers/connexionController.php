@@ -16,7 +16,7 @@ class connexionController extends Controller
 
        request()->validate([
             'email'=> ['required','email'],
-            'password'=> ['required','min:8'],
+            'password'=> ['required','min:3','max:6'],
         ]);
     /**
      * Handle an authentication attempt.
@@ -26,7 +26,7 @@ class connexionController extends Controller
      * @return Response
      */
     
-        $credentials = $request->only('email', 'password');
+       $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...

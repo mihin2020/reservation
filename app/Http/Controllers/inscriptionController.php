@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Register;
 use App\utilisateur;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class inscriptionController extends Controller
 {
@@ -24,7 +28,7 @@ class inscriptionController extends Controller
             ]
             );
             
-        $utilisateur =  utilisateur::create([
+       $utilisateur =  utilisateur::create([
             'nom' => request('nom'),
             'prenom' => request('prenom'),
             'role' => request('role'),
@@ -32,8 +36,12 @@ class inscriptionController extends Controller
             'password' => bcrypt(request('password')),
             'password_confirmation' => bcrypt(request('password_confirmation')),
         ]) ;
-       
+
+           // Mail::to($utilisateur)->send(new Register($utilisateur));
+
         return view ('pages/success');
 
     }
+
+    
 }

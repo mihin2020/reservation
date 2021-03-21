@@ -45,29 +45,32 @@
             <div class="col-1"></div>
             <div class="col-10">
               <div class="  programme px-4 py-3 mb-5">
-                  <form action="">
+                  <form action="/program" method="post">
+                  {{@csrf_field()}}
                   <div class="form-group my-4 ">
                         <label for="example-date-input" class=" text_color font-weight-bold size form-label">Date</label>
                         <div class="">
-                        <input class="form-control" type="date" value="" id="example-date-input">
+                        <input class="form-control" name="date" type="date" value="" id="example-date-input">
                   </div>
 
                   <div class="form-group my-4 px-3">
                       <label for="example-time-input" class=" text_color  font-weight-bold form-label">Horaire</label>
                       <div class="row">
-                        <input class="col-5 form-control " type="time" value="" id="example-time-input">
+                        <input class="col-5 form-control "name="start_hour" type="time" value="" id="example-time-input">
                         <div class="col-2 ">
                           <p class="text-center text_color font-weight-bold"> à</p>
                         </div>
-                        <input class="col-5 form-control" type="time" value="" id="example-time-input">
+                        <input class="col-5 form-control" name="end_hour" type="time" value="" id="example-time-input">
                       </div>
                   </div>
 
                   <div class="form-group my-4">
                       <label for="example-number-input" class=" text_color  font-weight-bold form-label">Nombre de place</label>
                       <div class="">
-                        <input class="form-control" type="number" value="" id="example-number-input">
+                        <input class="form-control" type="number" name="place" value="" id="example-number-input">
+                        <button class="btn btn-outline-danger my-sm-0 m-auto font-weight-bold droite2" type="submit" >Soumettre</button>
                   </div>
+                  
                   </form>
               </div>
               </div>
