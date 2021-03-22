@@ -7,10 +7,13 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
+
 class Register extends Mailable
 {
+    
     use Queueable, SerializesModels;
     public $utilisateur;
+    
 
     /**
      * Create a new message instance.
@@ -32,5 +35,6 @@ class Register extends Mailable
         return $this->view('/email/register')
         ->from('mihin.aime@gmail.com','Mihin')
         ->subject('Bienvenue sur Simplon');
+      
     }
 }

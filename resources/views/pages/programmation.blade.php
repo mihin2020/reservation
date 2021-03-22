@@ -47,12 +47,18 @@
               <div class="  programme px-4 py-3 mb-5">
                   <form action="/program" method="post">
                   {{@csrf_field()}}
-                  <div class="form-group my-4 ">
-                        <label for="example-date-input" class=" text_color font-weight-bold size form-label">Date</label>
-                        <div class="">
-                        <input class="form-control" name="date" type="date" value="" id="example-date-input">
+                  <div class="form-group  text_color  font-weight-bold  my-4">
+                  <label for="exampleSelect1 ">jour</label>
+                        <select class="form-control" name="jour"  id="exampleSelect1">
+                        <option>Lundi</option>
+                        <option>Mardi</option>
+                        <option>Mercredi</option>
+                        <option>Jeudi</option>
+                        <option>Vendredi</option>
+                        <option>Samedi</option>
+                        <option>Dimanche</option>
+                        </select>
                   </div>
-
                   <div class="form-group my-4 px-3">
                       <label for="example-time-input" class=" text_color  font-weight-bold form-label">Horaire</label>
                       <div class="row">
@@ -63,14 +69,12 @@
                         <input class="col-5 form-control" name="end_hour" type="time" value="" id="example-time-input">
                       </div>
                   </div>
-
                   <div class="form-group my-4">
                       <label for="example-number-input" class=" text_color  font-weight-bold form-label">Nombre de place</label>
                       <div class="">
                         <input class="form-control" type="number" name="place" value="" id="example-number-input">
                         <button class="btn btn-outline-danger my-sm-0 m-auto font-weight-bold droite2" type="submit" >Soumettre</button>
                   </div>
-                  
                   </form>
               </div>
               </div>

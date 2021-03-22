@@ -16,7 +16,7 @@ class programController extends Controller
 
         request()->validate(
             [
-                'date'=> ['required','date'],
+                'jour'=> ['required'],
                 'start_hour'=> ['required'],
                 'end_hour'=> ['required'],
                 'place'=> ['required','string'],
@@ -24,7 +24,7 @@ class programController extends Controller
             );
             
         $program =  program::create([
-            'date' => request('date'),
+            'jour' => request('jour'),
             'start_hour' => request('start_hour'),
             'end_hour' => request('end_hour'),
             'place' => request('place'),

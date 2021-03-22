@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\Register;
+use App\Notifications\RegisteredUser;
 use App\utilisateur;
 use Illuminate\Support\Facades\Mail;
+
 
 
 
@@ -35,10 +37,10 @@ class inscriptionController extends Controller
             'email' => request('email'),
             'password' => bcrypt(request('password')),
             'password_confirmation' => bcrypt(request('password_confirmation')),
+            'confirmation_token' =>bcrypt('confirmation_token'),
         ]) ;
 
-           // Mail::to($utilisateur)->send(new Register($utilisateur));
-
+           Mail::to($utilisateur)->send(new Register($utilisateur));
         return view ('pages/success');
 
     }

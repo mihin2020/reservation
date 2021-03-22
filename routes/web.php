@@ -6,6 +6,10 @@ use App\Http\Controllers;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Mail;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Display_ProgramController;
+use App\Http\Controllers\register_courController;
+use App\Http\Controllers\acceuilController;
+use App\Http\Controllers\DisplayController;
 
 
 /*
@@ -24,15 +28,15 @@ Route::get('/', function () {
 });
 
 
-
+/*
     Route::get('/test', function () {
         $programs = DB ::table('programs')->get();
         return view('/pages/test',compact('programs'));
       
     });
-    
+    */
 
-
+Route::get('/register_cour', 'register_courController@register');
 
 Route::get('/inscription', 'inscriptionController@formulaire');
 
@@ -50,9 +54,18 @@ Route::get('/programmation', 'programController@formulaire');
 
 Route::post('/program', 'programController@traitement');
 
-//Route::get('/send-email', [MailController::class,'sendMail']);
-
-
-//Route::get('/test', [Display_ProgramController::class, 'programmation']);
+Route::get('/dashboard', [Display_ProgramController::class, 'programmation']);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/acceuil', 'acceuilController@acceuil');
+
+Route::get('/register_cour', 'DisplayController@name');
+
+/*Route::groupe(['middleware'=>['auth','admin'],'prefix'=>'admin'],function(){
+    Route::get('/acceuil','acceuilController@acceuil')->name('/pages/acceuil');
+});*/
+
+/*Route::groupe(['middleware'=>['auth','apprenant'],'prefix'=>'apprenant'],function(){
+    Route::get('/dashboard','dashboardController@acceuil')->name('/pages/dashboard');
+});*/

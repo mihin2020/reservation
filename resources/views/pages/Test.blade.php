@@ -10,10 +10,13 @@
     
 <p>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro deleniti reiciendis adipisci veniam id tempora commodi. Quidem a modi molestias reiciendis, reprehenderit molestiae magni nesciunt vel quasi at, nobis neque!
+<ul>
 
 @foreach($programs as $program)
-   <li>{{$program->date}} </li> 
+   <li>{{$program->start_hour}} </li> 
 @endforeach
+
+</ul>
 </p>
 </body>
 </html>

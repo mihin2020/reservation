@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\utilisateur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 
 class connexionController extends Controller
 {
+    use AuthenticatesUsers;
+
     public function formulaire(){
         return view('pages/connexion');
     }
@@ -33,6 +37,17 @@ class connexionController extends Controller
             return redirect()->intended('/dashboard');
         }
         
+       
+    }
+    protected function authenticated(Request $request,$utilisateur)
+    {
+        if ($utilisateur->isAdmin()){
+            return redirect(route('/pages/dashboard'));
+            
+        }
+        else if ($utilisateur->isApprenant()){
+            return redirect(route('/pages/acceuil'));
+        }
     }
        
 }

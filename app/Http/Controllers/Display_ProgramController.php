@@ -1,5 +1,5 @@
 <?php
-/*
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ class Display_ProgramController extends Controller
 {
     public function programmation(){
         $programs = DB::table('programs')->get();
-        return view('/pages/test',[$programs]);
+        return view('/pages/dashboard',['programs'=>$programs]);
     }
 
 }
