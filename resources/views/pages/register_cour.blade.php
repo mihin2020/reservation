@@ -53,10 +53,10 @@
             </thead>
             @foreach($utilisateurs as $utilisateur)
             <tbody>
-                <tr class="text-white">
-                    <td  class="text-white">{{$utilisateur->email}} </td>
-                    <td>{{$utilisateur->nom}}</td>
-                    <td>{{$utilisateur->prenom}}</td>
+                <tr class="text-danger font-weight-bold">
+                    <td  class="text-danger font-weight-bold">{{$utilisateur->email}} </td>
+                    <td class="text-danger font-weight-bold">{{$utilisateur->nom}}</td>
+                    <td class="text-danger font-weight-bold">{{$utilisateur->prenom}}</td>
                     <td><button type="button" class="btn btn-success">Valider </button>
                     <button type="button" class="btn btn-danger">Refuser</button> 
                 </td> 

@@ -71,7 +71,6 @@ body {
     font-weight: 300;
     line-height: 1.42em;
     color: #8D0303;
-    background-color: ;
 }
 
 h1 {
@@ -149,7 +148,7 @@ h2 a {
 /* Background-color of the even rows */
 
 .container tr:nth-child(even) {
-    background-color: hsl(223, 17%, 57%);
+    background-color: #dddddd;
 }
 
 .container th {
@@ -168,10 +167,10 @@ h2 a {
 }
 
 .container td:hover {
-    background-color: #790303;
+    background-color: #dddddd;
     color: #ffffff;
     font-weight: bold;
-    box-shadow: hsl(192, 87%, 42%) -1px 1px, hsl(192, 87%, 42%) -2px 2px, hsl(192, 87%, 42%) -3px 3px, hsl(192, 87%, 42%) -4px 4px, hsl(192, 87%, 42%) -5px 5px, hsl(192, 87%, 42%) -6px 6px;
+    box-shadow: #790303 -1px 1px, #790303 -2px 2px, #790303 -3px 3px, #790303 -4px 4px, #790303 -5px 5px, #790303 -6px 6px;
     transform: translate3d(6px, -6px, 0);
     transition-delay: 0s;
     transition-duration: 0.4s;

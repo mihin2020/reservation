@@ -8,7 +8,7 @@ use App\Http\Controllers\Mail;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Display_ProgramController;
 use App\Http\Controllers\register_courController;
-use App\Http\Controllers\acceuilController;
+use App\Http\Controllers\Acceuil_Programm_Controller;
 use App\Http\Controllers\DisplayController;
 
 
@@ -44,6 +44,11 @@ Route::post('/inscription', 'inscriptionController@traitement');
 
 Route::get('/connexion', 'connexionController@formulaire');
 
+
+Route::get('/dashboard', 'connexionController@redirectTo');
+Route::get('/acceuil', 'connexionController@redirectTo');
+
+
 Route::post('/connexion', 'connexionController@traitement');
 
 Route::get('/dashboard', 'dashboardController@acceuil');
@@ -58,7 +63,7 @@ Route::get('/dashboard', [Display_ProgramController::class, 'programmation']);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/acceuil', 'acceuilController@acceuil');
+Route::get('/acceuil', 'Acceuil_Programm_Controller@acceuil');
 
 Route::get('/register_cour', 'DisplayController@name');
 

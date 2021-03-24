@@ -11,7 +11,7 @@
     <!--<link rel="stylesheet" href="Style/bootstrap/css/bootstrap.min.css">-->
 </head>
        
-       <body style="background:hsl(224, 100%, 91%);">
+       <body style="background:#dddddd;">
     <div class="container-fluid p-0">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light fond_entete">
@@ -28,7 +28,8 @@
                      <div>
                         <img src="img/noti.png" width="90px" height="85px" class="droite1 mb-1" alt="">
                     </div>
-                    <button class="btn btn-outline-light my-2 my-sm-0 font-weight-bold droite2" type="submit">Deconnexion</button>
+                    <a href="/deconnexion"> <button class="btn btn-outline-light my-2 my-sm-0 font-weight-bold droite2" type="submit" >Deconnexion</button></a>
+            </div>
                 </div>
               </nav>
         </header>
@@ -48,16 +49,20 @@
                 
             </tr>
         </thead>
-        @foreach ($programs as $program)
+        @foreach($programs as $program)
         <tbody>
             <tr>
-                <td class="text-white">{{$program->jour}}</td>
-                <td class="text-white">{{$program->start_hour}}</td>
+                <td class="text-danger font-weight-bold">{{$program->jour}}</td>
+                <td class="text-danger font-weight-bold">{{$program->start_hour}}-{{$program->end_hour}}</td>
                 <td class=""><img src="img/reser.png" alt="" title="Reserver une place"></td>
                 <a href=""><td><img src="img/Delete_52px.png" alt=""></td></a>
             </tr>     
         </tbody>
         @endforeach
+
+        
+   
+
 
       
 </body>

@@ -25,7 +25,7 @@ class connexionController extends Controller
     /**
      * Handle an authentication attempt.
      *
-     * @param  \Illuminate\Http\Request $request
+     *  @param  \Illuminate\Http\Request $request
      *
      * @return Response
      */
@@ -35,6 +35,8 @@ class connexionController extends Controller
         if (Auth::attempt($credentials)) {
             // Authentication passed...
             return redirect()->intended('/dashboard');
+        }else{
+            return redirect()->intended('/connexion');
         }
         
        
@@ -48,6 +50,14 @@ class connexionController extends Controller
         else if ($utilisateur->isApprenant()){
             return redirect(route('/pages/acceuil'));
         }
+    }
+    public function redirectTo(){
+        if (Auth::utilisateur()->role->pluck('nom')->contains('admi')){
+            return '/pages/dashboard';
+        
+        }elseif(Auth::utilisateur()->role->pluck('nom')->contains('apprenant'))
+            return '/pages/acceuil';
+        
     }
        
 }
