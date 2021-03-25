@@ -26,7 +26,7 @@
                         <img src="img/images4.png" width="90px" height="50px" class="droite" alt="">
                     </div>
                      <div>
-                        <img src="img/noti.png" width="90px" height="85px" class="droite1 mb-1" alt="">
+                      <!--  <img src="img/noti.png" width="90px" height="85px" class="droite1 mb-1" alt="">-->
                     </div>
                     <a href="/deconnexion"> <button class="btn btn-outline-light my-2 my-sm-0 font-weight-bold droite2" type="submit" >Deconnexion</button></a>
             </div>

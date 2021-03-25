@@ -41,7 +41,7 @@ class inscriptionController extends Controller
         ]) ;
 
            Mail::to($utilisateur)->send(new Register($utilisateur));
-        return view ('pages/success');
+           return view ('pages/success');
 
     }
 

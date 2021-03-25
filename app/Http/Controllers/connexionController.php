@@ -32,25 +32,27 @@ class connexionController extends Controller
     
        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)&& $request->email=='hugues@gmail.com') {
             // Authentication passed...
             return redirect()->intended('/dashboard');
+        }elseif(Auth::attempt($credentials)&& $request->email !=='hugues@gmail.com'){
+            return redirect()->intended('/acceuil');
         }else{
             return redirect()->intended('/connexion');
         }
         
        
-    }
-    protected function authenticated(Request $request,$utilisateur)
+    }/*
+    public function redirectTo (Request $request,$utilisateur)
     {
-        if ($utilisateur->isAdmin()){
-            return redirect(route('/pages/dashboard'));
+        if ($utilisateur->role=='admi'){
+            return redirect('/pages/dashboard'));
             
         }
-        else if ($utilisateur->isApprenant()){
+        else { 
             return redirect(route('/pages/acceuil'));
         }
-    }
+    }/*
     public function redirectTo(){
         if (Auth::utilisateur()->role->pluck('nom')->contains('admi')){
             return '/pages/dashboard';
@@ -58,6 +60,6 @@ class connexionController extends Controller
         }elseif(Auth::utilisateur()->role->pluck('nom')->contains('apprenant'))
             return '/pages/acceuil';
         
-    }
+    }*/
        
 }
