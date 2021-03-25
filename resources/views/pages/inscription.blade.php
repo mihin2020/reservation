@@ -43,12 +43,6 @@
                                             <input type="text" name="prenom"  value="{{old('prenom')}}"id="username" class="form__input" placeholder="Prenom">
                                         </div>
                                         <div class="">
-                                        @if($errors->has('role'))
-                                            <p class="font-weight-bold text-danger">{{$errors->first('role') }}</p> 
-                                        @endif
-                                            <input type="text" name="role" value="{{old('role')}}" id="username" class="form__input" placeholder="role">
-                                        </div>
-                                        <div class="">
                                         @if($errors->has('email'))
                                             <p class="font-weight-bold text-danger">{{$errors->first('email') }}</p> 
                                         @endif

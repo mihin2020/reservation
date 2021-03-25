@@ -64,7 +64,7 @@
                   <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0 ">
                     <div class="icon-box shadow-lg"  data-toggle="modal" data-target="#exampleModal">
                       <div class="">
-                          <a href=""><img src="img/reservation.png" width="175px" alt=""></a>
+                          <a href="reservation"><img src="img/reservation.png" width="175px" alt=""></a>
                     </div>
                       <p class="text_color text-center font-weight-bold">Reservation en cours</p>
                     </div>
@@ -112,7 +112,7 @@
     <div class="card-body">
       <div class="row">
           <div class='col-6'>
-          <div class="card">
+          <div class="card bg-light">
             <div class="card-body ">
            <p class="text-center font-weight-bold">Horaire :</p>
               <div class="row">
@@ -130,7 +130,7 @@
           </div>
           </div>
           <div class='col-6'>
-          <div class="card">
+          <div class="card bg-light">
             <div class="card-body">
               <p class="text-center font-weight-bold">Nombre de place :</p>
               <p class="text-center ">{{$program->place}}</p>

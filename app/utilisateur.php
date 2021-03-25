@@ -13,7 +13,7 @@ class utilisateur extends Model implements Authenticatable
     use Notifiable;
     use  BasicAuthenticatable;
     protected $fillable = [ // $fillable permet de signifier les champs modifiables il est le contraire de $guarded
-        'nom', 'prenom', 'role','email','password','password_confirmation',
+        'nom', 'prenom', 'email','password','password_confirmation',
        
     ];
 
@@ -37,10 +37,5 @@ class utilisateur extends Model implements Authenticatable
         return'';
     }
 
-    public function isAdmin () {
-        return $this ->role === 'admin';
-    }
-    public function isApprenant () {
-        return $this ->role === 'apprenant';
-    }
+   
 }

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/inscription.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style_inscription.css">
-    <title>Inscription en cours</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Reservation en cours</title>
 </head>
 
 <body class="back_ground">
@@ -25,7 +25,7 @@
                 <div>
                     <img src="img/images4.png" width="90px" height="50px" class="droite" alt="">
                 </div>
-                 <!--<div>
+                <!-- <div>
                     <img src="img/noti.png" width="90px" height="85px" class="droite1 mb-1" alt="">
                 </div>-->
                <a href="/deconnexion"> <button class="btn btn-outline-light my-2 my-sm-0 font-weight-bold droite2" type="submit" >Deconnexion</button></a>
@@ -36,7 +36,7 @@
     <!--section 1-->
     <div class="container-fluid pl-5 my-4">
         <div class="row">
-        <div class="col-5 font-weight-bold text-uppercase text-center text_color size "><a href="/dashboard"> Tableau de bord/Inscription</a></div>
+        <div class="col-5 font-weight-bold text-uppercase text-center text_color size "><a href="/dashboard"> Tableau de bord/Reservation</a></div>
             <div class="offset-col-7"></div>
         </div>
     </div>
@@ -51,26 +51,26 @@
                     
                 </tr>
             </thead>
-            @foreach($utilisateurs as $utilisateur)
+            
             <tbody>
                 <tr class="text-danger font-weight-bold">
-                    <td  class="text-danger font-weight-bold">{{$utilisateur->email}} </td>
-                    <td class="text-danger font-weight-bold">{{$utilisateur->nom}}</td>
-                    <td class="text-danger font-weight-bold">{{$utilisateur->prenom}}</td>
+                    <td  class="text-danger font-weight-bold"> </td>
+                    <td class="text-danger font-weight-bold"></td>
+                    <td class="text-danger font-weight-bold"></td>
                     <td><button type="button" class="btn btn-success">Valider </button>
                     <button type="button" class="btn btn-danger">Refuser</button> 
                 </td> 
                 </tr>
             </tbody>
-            @endforeach
+            
         </table>
-
+<!--
     <footer>
         <div class="container-fluid pied_fond">
             <p class="text-center text-white text-uppercase py-2">Simplon 2021</p>
         </div>
     </footer>
-    
+    -->
     
   
 </body>

@@ -32,10 +32,10 @@ class connexionController extends Controller
     
        $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)&& $request->email=='hugues@gmail.com') {
+        if (Auth::attempt($credentials)&& $request->email=='admi@gmail.com') {
             // Authentication passed...
             return redirect()->intended('/dashboard');
-        }elseif(Auth::attempt($credentials)&& $request->email !=='hugues@gmail.com'){
+        }elseif(Auth::attempt($credentials)&& $request->email !=='admi@gmail.com'){
             return redirect()->intended('/acceuil');
         }else{
             return redirect()->intended('/connexion');

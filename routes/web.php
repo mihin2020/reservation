@@ -10,6 +10,8 @@ use App\Http\Controllers\Display_ProgramController;
 use App\Http\Controllers\register_courController;
 use App\Http\Controllers\Acceuil_Programm_Controller;
 use App\Http\Controllers\DisplayController;
+use App\Http\Controllers\ReservationController;
+
 
 
 /*
@@ -44,11 +46,6 @@ Route::post('/inscription', 'inscriptionController@traitement');
 
 Route::get('/connexion', 'connexionController@formulaire');
 
-
-Route::get('/dashboard', 'connexionController@redirectTo');
-Route::get('/acceuil', 'connexionController@redirectTo');
-
-
 Route::post('/connexion', 'connexionController@traitement');
 
 Route::get('/dashboard', 'dashboardController@acceuil');
@@ -67,10 +64,4 @@ Route::get('/acceuil', 'Acceuil_Programm_Controller@acceuil');
 
 Route::get('/register_cour', 'DisplayController@name');
 
-/*Route::groupe(['middleware'=>['auth','admin'],'prefix'=>'admin'],function(){
-    Route::get('/acceuil','acceuilController@acceuil')->name('/pages/acceuil');
-});*/
-
-/*Route::groupe(['middleware'=>['auth','apprenant'],'prefix'=>'apprenant'],function(){
-    Route::get('/dashboard','dashboardController@acceuil')->name('/pages/dashboard');
-});*/
+Route::get('/reservation','ReservationController@reservation');

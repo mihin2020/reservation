@@ -148,7 +148,7 @@ h2 a {
 /* Background-color of the even rows */
 
 .container tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: hsl(223, 17%, 57%);
 }
 
 .container th {
@@ -186,7 +186,7 @@ h2 a {
 }
 
 .pied_fond {
-    margin-top: 100px;
+    margin-top: 275px;
     text-align: center;
     height: 50px;
     background-color: #790303;

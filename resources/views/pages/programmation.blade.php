@@ -83,9 +83,9 @@
         </div>
     </div>
     <footer>
-       <!-- <div class="container-fluid pied_fond">
+        <div class="container-fluid pied_fond">
             <p class="text-center text-white text-uppercase py-2">Simplon 2021</p>
-        </div>-->
+        </div>
     </footer>
 </body>
 </html>
