@@ -45,7 +45,7 @@
                 <th><h1>JOUR</h1></th>
                 <th><h1>HORAIRE</h1></th>
                 <th><h1>RESERVER</h1></th>
-                <th><h1>ANNULER</h1></th>
+               
                 
             </tr>
         </thead>
@@ -55,12 +55,12 @@
                 <td class="text-danger font-weight-bold">{{$program->jour}}</td>
                 <td class="text-danger font-weight-bold">{{$program->start_hour}}-{{$program->end_hour}}</td>
                 <td class=""><img src="img/reser.png" alt="" title="Reserver une place"></td>
-                <a href=""><td><img src="img/Delete_52px.png" alt=""></td></a>
+               
             </tr>     
         </tbody>
         @endforeach
     </table>
-    
+
     <footer>
         <div class="container-fluid pied_fond">
             <p class="text-center text-white text-uppercase py-2">Simplon 2021</p>
