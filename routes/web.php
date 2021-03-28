@@ -11,6 +11,7 @@ use App\Http\Controllers\register_courController;
 use App\Http\Controllers\Acceuil_Programm_Controller;
 use App\Http\Controllers\DisplayController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ValidateController;
 
 
 
@@ -65,3 +66,7 @@ Route::get('/acceuil', 'Acceuil_Programm_Controller@acceuil');
 Route::get('/register_cour', 'DisplayController@name');
 
 Route::get('/reservation','ReservationController@reservation');
+
+Route::get('/validation/{id}','ValidateController@validation');
+
+Route::get('/delete/{id}','ValidateController@suppression');

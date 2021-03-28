@@ -18,7 +18,7 @@ class connexionController extends Controller
 
     public function traitement(Request $request){
 
-       request()->validate([
+            request()->validate([
             'email'=> ['required','email'],
             'password'=> ['required','min:3','max:6'],
         ]);

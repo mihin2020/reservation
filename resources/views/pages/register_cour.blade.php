@@ -57,8 +57,12 @@
                     <td  class="text-danger font-weight-bold">{{$utilisateur->email}} </td>
                     <td class="text-danger font-weight-bold">{{$utilisateur->nom}}</td>
                     <td class="text-danger font-weight-bold">{{$utilisateur->prenom}}</td>
-                    <td><button type="button" class="btn btn-success">Valider </button>
-                    <button type="button" class="btn btn-danger">Refuser</button> 
+                   
+                    <td>@if ($utilisateur->statut=='passif')
+                    <a href="validation/{{$utilisateur->id}}"><button type="button" class="btn btn-success">Valider </button></a>
+                    @endif 
+                     <a href="delete/{{$utilisateur->id}}"><button type="button" class="btn btn-danger">Refuser</button></a> 
+                                        
                 </td> 
                 </tr>
             </tbody>

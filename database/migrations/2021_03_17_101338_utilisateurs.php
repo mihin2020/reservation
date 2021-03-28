@@ -17,8 +17,9 @@ class Utilisateurs extends Migration
             $table->id();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email')->primary();
+            $table->string('email');
             $table->string('password');
+            $table->string('statut')->default('passif');
             $table->string('password_confirmation');
             $table->timestamps();
         });
