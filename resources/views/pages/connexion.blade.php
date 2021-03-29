@@ -11,15 +11,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-5 mt-5 ">
+        <div class="row mt-5 centrer">
+            <div class="col-5 mt-5 img_disp">
                 <img src="img/img.png" width="450px" height="400px" alt="">
             </div>
             <div class="col-7">
                 
                     <div class="row main-content ml-5 text-center">
                         <div class="col-md-5 text-center company__info">
-                            <div class="mb-5"><img src="img/simplon.png" width="100px" height="100px" alt=""></div>
+                            <div class="mb-5 "><img src="img/simplon.png" width="100px" height="100px" alt=""></div>
                             <h4 class="text-uppercase">Simplon</h4>
                         </div>
                         <div class="col-md-7 col-xs-12 col-sm-12 login_form ">

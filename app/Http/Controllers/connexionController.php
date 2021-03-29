@@ -38,7 +38,7 @@ class connexionController extends Controller
         }elseif(Auth::attempt($credentials)&& $request->email !=='admi@gmail.com'){
             return redirect()->intended('/acceuil');
         }else{
-            return redirect()->intended('/connexion');
+            return redirect()->intended('/inscription');
         }
         
        

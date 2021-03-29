@@ -49,3 +49,137 @@ span {
     height: 50px;
     background-color: #790303;
 }
+
+@media screen and (max-width: 320px) {
+    .img_disp {
+        display: none;
+    }
+    .main-content {
+        width: 160%;
+        height: 115%;
+        padding: 0px;
+        margin: auto;
+    }
+    .login_form {
+        width: 100%;
+    }
+    body {
+        height: 10%;
+    }
+    .centrer {
+        margin-bottom: 150px;
+    }
+    .company__info {
+        background-color: #790303;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .img_disp {
+        display: none;
+    }
+    .main-content {
+        width: 160%;
+        height: 115%;
+        padding: 0px;
+        margin: auto;
+    }
+    .login_form {
+        width: 100%;
+    }
+    .centrer {
+        margin-bottom: 150px;
+    }
+    .company__info {
+        background-color: #790303;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .img_disp {
+        display: none;
+    }
+    .main-content {
+        width: 160%;
+        height: 115%;
+        padding: 0px;
+        margin: auto;
+    }
+    .login_form {
+        width: 100%;
+    }
+    body {
+        height: 10%;
+    }
+    .centrer {
+        margin-bottom: 150px;
+    }
+    .company__info {
+        background-color: #790303;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img_disp {
+        display: none;
+    }
+    .main-content {
+        width: 160%;
+        height: 115%;
+        padding: 0px;
+        margin: auto;
+    }
+    .login_form {
+        width: 100%;
+    }
+    .centrer {
+        margin-bottom: 150px;
+    }
+    .company__info {
+        background-color: #790303;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    footer {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+}

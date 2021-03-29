@@ -7,12 +7,13 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/connexion.css">
     <link rel="stylesheet"  href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/inscription.css">
     <title>Inscription</title>
 </head>
 <body>
     <div class="container">
         <div class="row mt-5">
-            <div class="col-5  bas">
+            <div class="col-5  img_disp bas">
                 <img src="img/img.png" width="500px" height="550px" alt="">
             </div>
             <div class="col-7">
@@ -75,7 +76,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="dis_no">
         <div class="container-fluid pied_fond">
             <p class="text-center text-white text-uppercase py-2">Simplon 2021</p>
         </div>
