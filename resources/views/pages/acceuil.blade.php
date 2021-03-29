@@ -36,17 +36,15 @@
        </div>
 
         
-    <table class="container">
-        <div class="text-danger" style="margin-left: 100px;">
-            <h3 class="container-fluid" style="text-align: center;  margin-top: 100px;">Liste des horaires et des jours ouvrables</h3>
+    <table class="container haut">
+        <div class="text-danger my-2">
+            <h3 class=" centre text-center ">Liste des horaires et des jours ouvrables</h3>
           </div>
         <thead>
             <tr>
                 <th><h1>JOUR</h1></th>
                 <th><h1>HORAIRE</h1></th>
                 <th><h1>RESERVER</h1></th>
-               
-                
             </tr>
         </thead>
         @foreach($programs as $program)
@@ -62,15 +60,14 @@
     </table>
 
     <footer>
-        <div class="container-fluid pied_fond">
+        <div class="container-fluid pied_fond ">
             <p class="text-center text-white text-uppercase py-2">Simplon 2021</p>
         </div>
     </footer>
     
-   
-
-
-      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 
 

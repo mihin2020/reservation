@@ -35,7 +35,7 @@
     <!--section 1-->
     <div class="container-fluid pl-5 my-4">
         <div class="row">
-            <div class="col-2 font-weight-bold text-uppercase text_color size"> Tableau de bord</div>
+            <div class="col-md-2 font-weight-bold text-uppercase text_color size"> Tableau de bord</div>
             <div class="offset-col-10"></div>
         </div>
     </div>
