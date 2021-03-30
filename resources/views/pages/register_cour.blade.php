@@ -47,7 +47,7 @@
                     <th><h1>EMAIL</h1></th>
                     <th><h1>NOM</h1></th>
                     <th><h1>PRENOM</h1></th>
-                    <th><h1 class='ml-5'>DECISION</h1></th>
+                    <th><h1>DECISION</h1></th>
                     
                 </tr>
             </thead>
