@@ -6,6 +6,7 @@ use App\utilisateur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\DB;
 
 
 class connexionController extends Controller
@@ -16,7 +17,7 @@ class connexionController extends Controller
         return view('pages/connexion');
     }
 
-    public function traitement(Request $request){
+    public function traitement(Request $request ){
 
             request()->validate([
             'email'=> ['required','email'],
@@ -31,14 +32,17 @@ class connexionController extends Controller
      */
     
        $credentials = $request->only('email', 'password');
+       
+       $recup = DB::select('select * from utilisateurs where email=?',[$request->input('email')]);//recuperation du mail pour la verification avec le statut
+       
 
         if (Auth::attempt($credentials)&& $request->email=='admi@gmail.com') {
             // Authentication passed...
             return redirect()->intended('/dashboard');
-        }elseif(Auth::attempt($credentials)&& $request->email !=='admi@gmail.com'){
+        }elseif(Auth::attempt($credentials)&& ($request->email !=='admi@gmail.com') && ($recup[0]->statut =='actif')){
             return redirect()->intended('/acceuil');
         }else{
-            return redirect()->intended('/inscription');
+            return redirect()->intended('/');
         }
         
        

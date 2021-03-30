@@ -188,6 +188,39 @@ h2 a {
     th {
         font-size: smaller;
     }
+    .pied_fond {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    table {
+        font-size: smaller;
+    }
+    .btn .size {
+        font-size: smaller;
+    }
+    th {
+        font-size: smaller;
+    }
+    .pied_fond {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    table {
+        font-size: smaller;
+    }
+    .btn .size {
+        font-size: smaller;
+    }
+    th {
+        font-size: smaller;
+    }
+    .pied_fond {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 320px) {
