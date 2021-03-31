@@ -1,0 +1,6 @@
+qmexdjtnbeutbr:f4f0a51e0410f5fffcc0d741d956063ac2ed0e6ab29219bd3195f00b680fadbf@ec2-54-146-73-98.compute-1.amazonaws.com:5432/d4dqo8b4enakha
+user:qmexdjtnbeutbr
+mp:f4f0a51e0410f5fffcc0d741d956063ac2ed0e6ab29219bd3195f00b680fadbf
+hote:ec2-54-146-73-98.compute-1.amazonaws.com
+port:5432
+bd:d4dqo8b4enakha
